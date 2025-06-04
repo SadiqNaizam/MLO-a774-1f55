@@ -4,89 +4,101 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base Theme & Neutrals (Light Mode) */
+    --background: 0 0% 98%; /* Off-white */
+    --foreground: 240 10% 3.9%; /* Dark Slate Gray */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 240 10% 3.9%; /* Dark Slate Gray */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 240 10% 3.9%; /* Dark Slate Gray */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary Colors (Light Mode) - Green Theme */
+    --primary: 82 40% 52%; /* Appetizing Green (e.g., Greenery #88B04B) */
+    --primary-foreground: 82 30% 15%; /* Dark Green/Gray for contrast */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary Colors (Light Mode) */
+    --secondary: 220 20% 94%; /* Light Cool Gray */
+    --secondary-foreground: 220 15% 30%; /* Darker Cool Gray for text */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Colors (Light Mode) */
+    --muted: 220 20% 96%; /* Very Light Cool Gray */
+    --muted-foreground: 220 10% 45%; /* Medium Cool Gray for text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Colors (Light Mode) - Yellow Theme */
+    --accent: 51 100% 50%; /* Bright Yellow (e.g., Gold #FFD700) */
+    --accent-foreground: 51 30% 10%; /* Very Dark Gray/Brown for text */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive Colors (Light Mode) */
+    --destructive: 0 80% 55%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Border, Input, Ring (Light Mode) */
+    --border: 220 15% 88%; /* Light Cool Gray */
+    --input: 220 15% 88%; /* Light Cool Gray */
+    --ring: 51 100% 50%; /* Bright Yellow (from accent) */
 
-    --radius: 0.5rem;
+    /* Radius & Typography */
+    --radius: 0.75rem; /* Softly rounded corners (12px) */
+    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Variables (Light Mode) - Aligned with main theme */
+    --sidebar-background: 0 0% 96%; /* Slightly off-white, distinct */
+    --sidebar-foreground: 240 10% 10%; /* Dark gray */
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 220 15% 85%; /* Light gray border */
+    --sidebar-ring: var(--ring);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Base Theme & Neutrals (Dark Mode) */
+    --background: 220 10% 15%; /* Dark Slate Gray */
+    --foreground: 0 0% 95%; /* Light Gray/Off-white */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 10% 20%; /* Slightly Lighter Dark Slate Gray */
+    --card-foreground: 0 0% 95%; /* Light Gray/Off-white */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 10% 18%; /* Dark Slate Gray (slightly different for depth) */
+    --popover-foreground: 0 0% 95%; /* Light Gray/Off-white */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary Colors (Dark Mode) - Green Theme */
+    --primary: 82 50% 65%; /* Lighter Green */
+    --primary-foreground: 82 30% 15%; /* Dark Green/Gray (same as light, good contrast) */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary Colors (Dark Mode) */
+    --secondary: 220 10% 22%; /* Darker Cool Gray */
+    --secondary-foreground: 0 0% 80%; /* Lighter Gray for text */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Muted Colors (Dark Mode) */
+    --muted: 220 10% 25%; /* Dark Cool Gray */
+    --muted-foreground: 220 10% 65%; /* Lighter Cool Gray for text */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent Colors (Dark Mode) - Yellow Theme */
+    --accent: 51 100% 50%; /* Bright Yellow (same as light) */
+    --accent-foreground: 51 30% 10%; /* Very Dark Gray/Brown (same as light) */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Destructive Colors (Dark Mode) */
+    --destructive: 0 75% 65%; /* Brighter Red */
+    --destructive-foreground: 0 0% 10%; /* Very Dark Gray for contrast */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Border, Input, Ring (Dark Mode) */
+    --border: 220 10% 30%; /* Medium-Dark Cool Gray */
+    --input: 220 10% 30%; /* Medium-Dark Cool Gray */
+    --ring: 51 100% 50%; /* Bright Yellow (from accent) */
+
+    /* Sidebar Variables (Dark Mode) - Aligned with main theme */
+    --sidebar-background: 220 10% 12%; /* Very dark slate, distinct */
+    --sidebar-foreground: 0 0% 90%; /* Light gray */
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--primary-foreground);
+    --sidebar-accent: var(--accent);
+    --sidebar-accent-foreground: var(--accent-foreground);
+    --sidebar-border: 220 10% 25%; /* Dark gray border */
+    --sidebar-ring: var(--ring);
   }
 }
 
@@ -97,5 +109,6 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
 }
